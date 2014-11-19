@@ -2,6 +2,9 @@
 	"name": "pathfinder-server",
 	"version": "0.1.0",
 	"main": "main.js",
+	"scripts": {
+		"start": "node --harmony main.js"
+	},
 	"dependencies": {
 		"nedb": "~0.11.1",
 		"koa": "~0.13.0",
