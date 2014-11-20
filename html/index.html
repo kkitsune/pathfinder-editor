@@ -41,19 +41,19 @@
 			</div>
 			<div class="col-md-3">
 				<div class="btn-group btn-group-justified">
-					<a class="btn btn-primary">Journal</a>
-					<a class="btn btn-primary">Race</a>
-					<a class="btn btn-primary">Deity</a>
+					<a class="btn btn-primary" ng-click="showJournal()">Journal</a>
+					<a class="btn btn-primary" ng-click="showRace()">Race</a>
+					<a class="btn btn-primary" ng-click="showDeity()">Deity</a>
 				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-12">
+			<div class="col-md-12" ng-controller="ClassController">
 				<div class="input-group">
 					<div class="input-group-addon">Class(es)</div>
 					<input type="text" class="form-control" ng-model="character.classes" ng-model-options="{ getterSetter: true }" readonly>
 					<span class="input-group-btn">
-						<a class="btn btn-primary">Manage</a>
+						<a class="btn btn-primary" ng-click="manageClass()">Manage</a>
 					</span>
 				</div>
 			</div>

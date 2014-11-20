@@ -1,6 +1,6 @@
 var app = angular.module("Pathfinder", ["ui.bootstrap"]);
 
-app.controller("CharacterController", function ($scope, $rootScope) {
+app.controller("CharacterController", function ($scope, $rootScope, $modal) {
 	$rootScope.character = {
 		name: function (value) {
 			if (angular.isDefined(value))
@@ -20,6 +20,36 @@ app.controller("CharacterController", function ($scope, $rootScope) {
 		size: function () {
 			return character.size;
 		}
+	};
+
+	$scope.showJournal = function () {
+		$modal.open({
+			templateUrl: "modals/journal.html",
+			size: "lg"
+		});
+	};
+
+	$scope.showRace = function () {
+		$modal.open({
+			templateUrl: "modals/race.html",
+			size: "lg"
+		});
+	};
+
+	$scope.showDeity = function () {
+		$modal.open({
+			templateUrl: "modals/deity.html",
+			size: "lg"
+		});
+	};
+});
+
+app.controller("ClassController", function ($scope, $rootScope, $modal) {
+	$scope.manageClass = function () {
+		$modal.open({
+			templateUrl: "modals/classManager.html",
+			size: "lg"
+		});
 	};
 });
 
@@ -147,7 +177,7 @@ app.controller("AttackBonus", function ($scope, $rootScope) {
 	};
 });
 
-app.controller("GearController", function ($scope, $rootScope) {
+app.controller("GearController", function ($scope, $rootScope, $modal) {
 	$rootScope.health = character.health;
 
 	$rootScope.armor = {
@@ -191,9 +221,30 @@ app.controller("GearController", function ($scope, $rootScope) {
 			return inventory.shield.special;
 		}
 	};
+
+	$scope.showHealth = function () {
+		$modal.open({
+			templateUrl: "modals/health.html",
+			size: "lg"
+		});
+	};
+
+	$scope.showArmor = function () {
+		$modal.open({
+			templateUrl: "modals/armor.html",
+			size: "lg"
+		});
+	};
+
+	$scope.showShield = function () {
+		$modal.open({
+			templateUrl: "modals/shield.html",
+			size: "lg"
+		});
+	};
 });
 
-app.controller("SkillController", function ($scope, $rootScope) {
+app.controller("SkillController", function ($scope, $rootScope, $modal) {
 	$rootScope.skills = skills;
 
 	$scope.getStat = function (skill) {
@@ -215,5 +266,12 @@ app.controller("SkillController", function ($scope, $rootScope) {
 
 	$scope.getTotal = function (skill) {
 		return $scope.getStat(skill) + skill.ranks + (skill.classSkill && skill.ranks > 0 ? 3 : 0);
+	};
+
+	$scope.showSkills = function () {
+		$modal.open({
+			templateUrl: "modals/skills.html",
+			size: "lg"
+		});
 	};
 });
