@@ -1,0 +1,22 @@
+<table class="table table-condensed" ng-controller="AttackBonus">
+	<thead>
+		<tr>
+			<th>Base Attack Bonus</th>
+			<th>Melee Touch</th>
+			<th>Ranged Touch</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<input type="number" class="form-control" ng-model="atkBonus.base" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="atkBonus.melee" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="atkBonus.ranged" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+		</tr>
+	</tbody>
+</table>

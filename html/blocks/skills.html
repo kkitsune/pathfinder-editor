@@ -1,0 +1,45 @@
+<table class="table table-hover table-condensed" ng-controller="SkillController">
+	<thead>
+		<tr>
+			<th>Skills</th>
+			<th>&nbsp;</th>
+			<th>Total</th>
+			<th>&nbsp;</th>
+			<th>Rank</th>
+			<th>&nbsp;</th>
+			<th>Stat</th>
+			<th>&nbsp;</th>
+			<th>Other</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="skill in skills">
+			<td>{{skill.name}}</td>
+			<td>
+				<a class="class-skill" style="{{skill.classSkill ? 'color: #555' : ''}}">&times;</a>
+			</td>
+			<td>
+				<input type="number" class="form-control" value="{{getTotal(skill)}}" readonly />
+			</td>
+			<td>=</td>
+			<td>
+				<input type="number" class="form-control" min="0" ng-model="skill.ranks" />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" value="{{getStat(skill)}}" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<td colspan="9">
+				<a class="btn btn-primary btn-block">Manage Skills</a>
+			</td>
+		</tr>
+	</tfoot>
+</table>

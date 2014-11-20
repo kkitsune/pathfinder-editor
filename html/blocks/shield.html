@@ -1,0 +1,46 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Shield</div>
+	<div class="panel-body">
+		<table class="table table-hover table-condensed">
+			<tbody>
+				<tr>
+					<td>Name</td>
+					<td colspan="3">
+						<input type="text" class="form-control" ng-model="shield.name" ng-model-options="{ getterSetter: true }" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td>Special</td>
+					<td colspan="3">
+						<input type="text" class="form-control" ng-model="shield.special" ng-model-options="{ getterSetter: true }" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td>AC Bonus</td>
+					<td>
+						<input type="number" class="form-control" ng-model="shield.bonus" ng-model-options="{ getterSetter: true }" readonly />
+					</td>
+					<td>Max Dex.</td>
+					<td>
+						<input type="number" class="form-control" ng-model="shield.maxDex" ng-model-options="{ getterSetter: true }" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td>Spell Failure</td>
+					<td>
+						<input type="number" class="form-control" ng-model="shield.failure" ng-model-options="{ getterSetter: true }" readonly />
+					</td>
+					<td>Speed</td>
+					<td>
+						<input type="number" class="form-control" value="0" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4">
+						<a class="btn btn-primary btn-block">Modify Shield</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

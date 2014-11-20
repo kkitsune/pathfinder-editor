@@ -1,0 +1,92 @@
+<table class="table table-hover table-condensed" ng-controller="ArmorClassController">
+	<thead>
+		<tr>
+			<th>Armor Class</th>
+			<th>Total</th>
+			<th>&nbsp;</th>
+			<th>Armor</th>
+			<th>&nbsp;</th>
+			<th>Shield</th>
+			<th>&nbsp;</th>
+			<th>Dex</th>
+			<th>&nbsp;</th>
+			<th>Size</th>
+			<th>&nbsp;</th>
+			<th>Other</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Base</td>
+			<td>
+				<input type="number" class="form-control" ng-model="ac.base" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>= 10 +</td>
+			<td>
+				<input type="number" class="form-control" ng-model="armor.bonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="shield.bonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.dexMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="character.size" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Touch</td>
+			<td>
+				<input type="number" class="form-control" ng-model="ac.touch" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>= 10 +</td>
+			<td class="text-center">---</td>
+			<td>+</td>
+			<td class="text-center">---</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.dexMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="character.size" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Flat-footed</td>
+			<td>
+				<input type="number" class="form-control" ng-model="ac.flatfooted" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>= 10 +</td>
+			<td>
+				<input type="number" class="form-control" ng-model="armor.bonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="shield.bonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td class="text-center">---</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="character.size" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+		</tr>
+	</tbody>
+</table>

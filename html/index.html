@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" ng-app="Pathfinder">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Pathfinder</title>
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css" />
+
+	<script src="libs/angular/angular.min.js"></script>
+	<script src="libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<link rel="stylesheet" href="app.css" />
+</head>
+
+<body>
+	<div class="container">
+		<div class="row" ng-controller="CharacterController">
+			<div class="col-md-5">
+				<div class="input-group">
+					<div class="input-group-addon">Name</div>
+					<input type="text" class="form-control" placeholder="Character Name" ng-model="character.name" ng-model-options="{ getterSetter: true }" />
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="input-group">
+					<label for="selAlignment" class="input-group-addon">Alignment</label>
+					<select class="form-control" ng-model="character.alignment" ng-model-options="{ getterSetter: true }">
+						<option value="lawfulG">Lawful Good</option>
+						<option value="lawfulN">Lawful Neutral</option>
+						<option value="lawfulE">Lawful Evil</option>
+						<option value="neutralG">Netral Good</option>
+						<option value="neutralN">True Neutral</option>
+						<option value="neutralE">Neutral Evil</option>
+						<option value="chaoticG">Chaotic Good</option>
+						<option value="chaoticN">Chaotic Neutral</option>
+						<option value="chaoticE">Chaotic Evil</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="btn-group btn-group-justified">
+					<a class="btn btn-primary">Journal</a>
+					<a class="btn btn-primary">Race</a>
+					<a class="btn btn-primary">Deity</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="input-group">
+					<div class="input-group-addon">Class(es)</div>
+					<input type="text" class="form-control" ng-model="character.classes" ng-model-options="{ getterSetter: true }" readonly>
+					<span class="input-group-btn">
+						<a class="btn btn-primary">Manage</a>
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<ng-include src="'blocks/stats.html'"></ng-include>
+			</div>
+			<div class="col-md-8">
+				<ng-include src="'blocks/armorClass.html'"></ng-include>
+				<ng-include src="'blocks/combatManeuver.html'"></ng-include>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5">
+				<ng-include src="'blocks/savingThrows.html'"></ng-include>
+			</div>
+			<div class="col-md-7">
+				<ng-include src="'blocks/speed.html'"></ng-include>
+				<ng-include src="'blocks/atkBonus.html'"></ng-include>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-7" ng-controller="GearController">
+				<ng-include src="'blocks/health.html'"></ng-include>
+				<br />
+				<ng-include src="'blocks/armor.html'"></ng-include>
+				<ng-include src="'blocks/shield.html'"></ng-include>
+			</div>
+			<div class="col-md-5">
+				<ng-include src="'blocks/skills.html'" />
+			</div>
+		</div>
+	</div>
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="data.js"></script>
+	<script src="app.js"></script>
+</body>
+
+</html>

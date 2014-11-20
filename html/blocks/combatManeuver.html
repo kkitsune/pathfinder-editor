@@ -1,0 +1,94 @@
+<table class="table table-hover table-condensed" ng-controller="CombatManeuverController">
+	<thead>
+		<tr>
+			<th>Combat Maneuver</th>
+			<th>Total</th>
+			<th>&nbsp;</th>
+			<th>BAB</th>
+			<th>&nbsp;</th>
+			<th>Str</th>
+			<th>&nbsp;</th>
+			<th>Dex</th>
+			<th>&nbsp;</th>
+			<th>Size</th>
+			<th>&nbsp;</th>
+			<th>Other</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Base Defense</td>
+			<td>
+				<input type="number" class="form-control" ng-model="cm.baseDef" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>= 10 +</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.strMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.dexMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="character.size" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Flat-footed Defense</td>
+			<td>
+				<input type="number" class="form-control" ng-model="cm.flatfootedDef" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>= 10 +</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.strMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td class="text-center">---</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="character.size" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Offense Bonus</td>
+			<td>
+				<input type="number" class="form-control" ng-model="cm.flatfootedDef" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td class="text-center">=</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.strMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td class="text-center">---</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" ng-model="character.size" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>+</td>
+			<td>
+				<input type="number" class="form-control" value="0" readonly />
+			</td>
+		</tr>
+	</tbody>
+</table>

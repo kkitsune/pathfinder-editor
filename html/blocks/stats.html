@@ -1,0 +1,84 @@
+<table class="table table-hover table-condensed" ng-controller="StatController">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>Base</th>
+			<th>Bonus</th>
+			<th>Modifier</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Str</td>
+			<td>
+				<input type="number" class="form-control" min="1" ng-model="stat.str" ng-model-options="{ getterSetter: true }" />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.strBonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.strMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Dex</td>
+			<td>
+				<input type="number" class="form-control" min="1" ng-model="stat.dex" ng-model-options="{ getterSetter: true }" />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.dexBonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.dexMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Con</td>
+			<td>
+				<input type="number" class="form-control" min="1" ng-model="stat.con" ng-model-options="{ getterSetter: true }" />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.conBonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.conMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Int</td>
+			<td>
+				<input type="number" class="form-control" min="1" ng-model="stat.int" ng-model-options="{ getterSetter: true }" />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.intBonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.intMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Wis</td>
+			<td>
+				<input type="number" class="form-control" min="1" ng-model="stat.wis" ng-model-options="{ getterSetter: true }" />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.wisBonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.wisMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+		</tr>
+		<tr>
+			<td>Cha</td>
+			<td>
+				<input type="number" class="form-control" min="1" ng-model="stat.cha" ng-model-options="{ getterSetter: true }" />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.chaBonus" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+			<td>
+				<input type="number" class="form-control" ng-model="stat.chaMod" ng-model-options="{ getterSetter: true }" readonly />
+			</td>
+		</tr>
+	</tbody>
+</table>
