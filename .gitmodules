@@ -1,6 +1,0 @@
-[submodule "html"]
-	path = html
-	url = https://github.com/kkitsune/pf-char-ed.git
-[submodule "database"]
-	path = database
-	url = https://github.com/kkitsune/pf-database.git
