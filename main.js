@@ -46,8 +46,20 @@ api.get("/", function * (next) {
 api.get("/skill", function * (next) {
 	var data = {};
 	db.skills.find({}, function (err, docs) {
-		data.docs = docs;
-		data.err = err;
+		data.result = docs;
+		data.error = err;
+	});
+	this.body = data;
+});
+
+api.get("/skill/:id", function * (next) {
+	var id = this.params.id;
+	var data = {};
+	db.skills.findOne({
+		_id: id
+	}, function (err, doc) {
+		data.result = doc;
+		data.error = err;
 	});
 	this.body = data;
 });
