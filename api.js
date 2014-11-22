@@ -1,8 +1,5 @@
 var koa = require("koa"),
-	serve = require("koa-static"),
-	mount = require("koa-mount"),
 	router = require("koa-router"),
-	logger = require("koa-logger"),
 	NeDB = require("nedb");
 
 var db = new Object();
