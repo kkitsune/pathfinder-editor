@@ -1,15 +1,19 @@
 {
 	"name": "pathfinder-authoring-tools",
 	"main": "app://tools/index.html",
+	"version": "0.1.0",
+	"js-flags": "--harmony",
 	"scripts": {
 		"start": "nw ."
 	},
 	"dependencies": {
-		"nedb": "~0.11.1"
+		"nedb": "~0.11.1",
+		"koa": "~0.13.0",
+		"koa-router": "~3.7.0"
 	},
 	"window": {
 		"width": 1200,
 		"height": 760,
-		"position": "center",
+		"position": "center"
 	}
 }
