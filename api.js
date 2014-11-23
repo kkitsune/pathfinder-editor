@@ -2,29 +2,29 @@ var koa = require("koa"),
 	router = require("koa-router"),
 	NeDB = require("nedb");
 
-var db = new Object();
-db.skills = new NeDB({
+var api = module.exports = koa();
+api.db = new Object();
+api.db.skills = new NeDB({
 	filename: __dirname + "/database/skills.db",
 	autoload: true
 });
-db.spells = new NeDB({
+api.db.spells = new NeDB({
 	filename: __dirname + "/database/spells.db",
 	autoload: true
 });
-db.classes = new NeDB({
+api.db.classes = new NeDB({
 	filename: __dirname + "/database/classes.db",
 	autoload: true
 });
-db.feats = new NeDB({
+api.db.feats = new NeDB({
 	filename: __dirname + "/database/feats.db",
 	autoload: true
 });
-db.races = new NeDB({
+api.db.races = new NeDB({
 	filename: __dirname + "/database/races.db",
 	autoload: true
 });
 
-var api = module.exports = koa();
 api.use(router(api));
 
 api.get("/", function * (next) {
@@ -42,7 +42,7 @@ api.get("/", function * (next) {
 
 api.get("/skill", function * (next) {
 	var data = {};
-	db.skills.find({}, function (err, docs) {
+	api.db.skills.find({}, function (err, docs) {
 		data.result = docs;
 		data.error = err;
 	});
@@ -52,7 +52,7 @@ api.get("/skill", function * (next) {
 api.get("/skill/:id", function * (next) {
 	var id = this.params.id;
 	var data = {};
-	db.skills.findOne({
+	api.db.skills.findOne({
 		_id: id
 	}, function (err, doc) {
 		data.result = doc;
