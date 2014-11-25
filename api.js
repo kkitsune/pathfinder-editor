@@ -25,8 +25,6 @@ api.db.races = new NeDB({
 	autoload: true
 });
 
-api.use(router(api));
-
 api.get("/", function * (next) {
 	this.body = {
 		version: "0.1.0",
