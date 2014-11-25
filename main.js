@@ -4,7 +4,7 @@ var koa = require("koa"),
 	logger = require("koa-logger");
 
 var app = koa().use(logger());
-app.use(mount("/api", require("./api.js")));
+app.use(mount("/api", require("./api.js").middleware()));
 app.use(serve(__dirname + "/html/"));
 
 app.listen(1337);

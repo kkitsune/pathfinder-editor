@@ -1,8 +1,8 @@
 var koa = require("koa"),
-	router = require("koa-router"),
+	Router = require("koa-router"),
 	NeDB = require("nedb");
 
-var api = module.exports = koa();
+var api = module.exports = new Router();
 api.db = new Object();
 api.db.skills = new NeDB({
 	filename: __dirname + "/database/skills.db",
